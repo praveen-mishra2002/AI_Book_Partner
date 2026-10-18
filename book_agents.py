@@ -1,4 +1,5 @@
 from __future__ import annotations
+from dotenv import load_dotenv
 
 import json
 import os
@@ -7,10 +8,11 @@ from pathlib import Path
 from typing import Any
 
 from openai import OpenAI
+load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1")
+MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 
 
 def _response_text(response: Any) -> str:

@@ -1,4 +1,5 @@
 .env
+.emv.example
 .venv/
 __pycache__/
 workspace/
